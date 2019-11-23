@@ -34,7 +34,6 @@ bld/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
-App.config
 
 # NUNIT
 *.VisualState.xml
