@@ -8,6 +8,6 @@ namespace NextDate
 {
     public class test
     {
-        int id;
+        int id;// 用户id
     }
 }
