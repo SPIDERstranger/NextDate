@@ -130,82 +130,9 @@ namespace NextDate
             return year + "." + month + "." + day;
         }
 
-        public NextDate nextday(NextDate next)
+        public static NextDate nextday(NextDate next)
         {
-
-            switch (next.month)
-            {
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                    if (next.day == 31)
-                    {
-                        next.month += 1;
-                        next.day = 1;
-
-                    }
-                    else
-                    {
-                        next.day += 1;
-                    }
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    if (next.day == 30)
-                    {
-                        next.month += 1;
-                        next.day = 1;
-                    }
-                    else
-                    {
-                        next.day += 1;
-                    }
-                    break;
-                case 12:
-                    if (next.day == 31)
-                    {
-                        next.month = 1;
-                        next.day = 1;
-                        next.year += 1;
-                    }
-                    else
-                    {
-                        next.day += 1;
-                    }
-                    break;
-                case 2:
-                    if (isleap())
-                    {
-                        if (next.day == 29)
-                        {
-                            next.day = 1;
-                            next.month = 3;
-                        }
-                        else
-                        {
-                            next.day += 1;
-                        }
-                    }
-                    else
-                    {
-                        if (next.day == 28)
-                        {
-                            next.day = 1;
-                            next.month = 3;
-                        }
-                        else
-                        {
-                            next.day += 1;
-                        }
-                    }
-                    break;
-            }
-
+            next.nextday();
             return next;
         }
 
